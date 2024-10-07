@@ -22,9 +22,9 @@ public class ParkingLot {
         levels.add(level);
     }
 
-    public boolean parkedVehicle(Vehicle vehicle) {
+    public boolean parkVehicle(Vehicle vehicle) {
         for(Level level : levels) {
-            if(level.parkedVehicle(vehicle)) {
+            if(level.parkVehicle(vehicle)) {
                 System.out.println("Vehicle parked successfully");
                 return true;
             }

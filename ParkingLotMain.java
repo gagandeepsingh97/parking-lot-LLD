@@ -14,10 +14,10 @@ public class ParkingLotMain {
         Vehicle truck1 = new Truck("T789");
         Vehicle car2 = new Car("C223");
 
-        parkingLot.parkedVehicle(car1);
-        parkingLot.parkedVehicle(motorCycle1);
-        parkingLot.parkedVehicle(truck1);
-        parkingLot.parkedVehicle(car2);
+        parkingLot.parkVehicle(car1);
+        parkingLot.parkVehicle(motorCycle1);
+        parkingLot.parkVehicle(truck1);
+        parkingLot.parkVehicle(car2);
 
         parkingLot.displayAvailability();
 

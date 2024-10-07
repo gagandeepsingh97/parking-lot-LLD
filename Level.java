@@ -11,10 +11,9 @@ public class Level {
     public Level(int floor, int numSpots) {
         this.floor = floor;
         parkingSpots = new ArrayList<>(numSpots);
-        int numMotorCycles = (int)0.2*numSpots;
-        int numCars = (int)0.4*numSpots;
-        int numTrucks = (int)0.4*numSpots;
-
+        int numMotorCycles = (int)(0.2*numSpots);
+        int numCars = (int)(0.4*numSpots);
+        int numTrucks = (int)(0.4*numSpots);
         for(int i = 1; i <= numMotorCycles; i++) {
             parkingSpots.add(new ParkingSpot(i, VehicleType.MOTORCYCLE));
         }
@@ -26,7 +25,7 @@ public class Level {
         }
     }
 
-    public synchronized boolean parkedVehicle(Vehicle vehicle) {
+    public synchronized boolean parkVehicle(Vehicle vehicle) {
         for(ParkingSpot spot : parkingSpots) {
             if(spot.isavailable() && vehicle.getType() == spot.getVehicletype()) {
                 spot.parkVehicle(vehicle);
